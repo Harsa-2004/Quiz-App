@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quiz</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f4f6f9;
+padding:40px;
+}
+
+.container{
+background:white;
+padding:30px;
+border-radius:10px;
+width:700px;
+margin:auto;
+box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.question{
+margin-bottom:20px;
+}
+
+.options{
+margin-left:20px;
+}
+
+button{
+background:#28a745;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1f8c38;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Quiz</h2>
+
+<form action="/submit" method="POST">
+
+{% for q in questions %}
+
+<div class="question">
+
+<p><b>{{q[1]}}</b></p>
+
+<div class="options">
+
+<label>
+<input type="radio" name="{{q[0]}}" value="A" required> {{q[2]}}
+</label><br>
+
+<label>
+<input type="radio" name="{{q[0]}}" value="B"> {{q[3]}}
+</label><br>
+
+<label>
+<input type="radio" name="{{q[0]}}" value="C"> {{q[4]}}
+</label><br>
+
+<label>
+<input type="radio" name="{{q[0]}}" value="D"> {{q[5]}}
+</label><br>
+
+</div>
+
+</div>
+
+<hr>
+
+{% endfor %}
+
+<button type="submit">Submit Quiz</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
