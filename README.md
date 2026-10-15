@@ -1,7 +1,7 @@
 
 # Quiz App
 
-A web application that generates quizzes based on user-provided topics, allowing users to test their knowledge and view their scores instantly.
+A web application that generates quizzes based on user-provided topics locally using gemma:2b LLM , allowing users to test their knowledge and view their scores instantly.
 
 ## Features
 
